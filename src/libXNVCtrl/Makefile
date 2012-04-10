@@ -20,13 +20,14 @@
 # SOFTWARE.
 
 RANLIB ?= ranlib
-
-libXNVCtrl.a : libXNVCtrl.a(NVCtrl.o)
+	
+libXNVCtrl.so : CFLAGS+=-fPIC -shared
+libXNVCtrl.so : libXNVCtrl.so(NVCtrl.o)
 	$(RANLIB) $@
 
 NVCtrl.o : NVCtrl.h nv_control.h NVCtrlLib.h
 .INTERMEDIATE: NVCtrl.o
 
 clean ::
-	rm -f libXNVCtrl.a *.o
+	rm -f libXNVCtrl.a  libXNVCtrl.so *.o
 .PHONY: clean

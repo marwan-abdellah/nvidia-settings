@@ -69,7 +69,7 @@ endif
 ##############################################################################
 
 XNVCTRL_DIR           ?= src/libXNVCtrl
-XNVCTRL_ARCHIVE       ?= $(XNVCTRL_DIR)/libXNVCtrl.a
+XNVCTRL_ARCHIVE       ?= $(XNVCTRL_DIR)/libXNVCtrl.so
 XCONFIG_PARSER_DIR    ?= src/XF86Config-parser
 COMMON_UTILS_DIR      ?= src/common-utils
 
